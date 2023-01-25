@@ -1,0 +1,13 @@
+{
+    "name": "webgl2-tian-gis",
+    "version": "0.1.0",
+    "author": "tian",
+    "description": "tian webgl2 vite template & samples",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tian666666/webgl2-tian-gis.git"
+    },
+    "scripts": {},
+    "devDependencies": {},
+    "dependencies": {}
+}
