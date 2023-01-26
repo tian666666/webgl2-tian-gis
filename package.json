@@ -7,7 +7,13 @@
         "type": "git",
         "url": "git+https://github.com/tian666666/webgl2-tian-gis.git"
     },
-    "scripts": {},
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build --config vite.config.github.js",
+        "preview": "vite preview"
+    },
     "devDependencies": {},
-    "dependencies": {}
+    "dependencies": {
+        "vite": "^4.0.4"
+    }
 }

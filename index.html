@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tian Webgpu Samples</title>
+    <style>
+        html,
+        body {
+            font-family: Avenir, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .menu {
+            width: 200px;
+            height: 100%;
+            border-right: 1px solid #888;
+            overflow: auto;
+            padding: 0 10px;
+        }
+
+        .menu>a {
+            display: block;
+            margin: 5px 0;
+            color: #045b88;
+            text-decoration: none;
+            cursor: pointer;
+
+        }
+
+        a {
+            margin-top: 5px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+
+        a.active {
+            color: red;
+        }
+
+        iframe {
+            flex-grow: 1;
+            border: none;
+        }
+
+        #webgl2samplediv {
+            display: grid;
+        }
+
+        #webgl2samplediv>a {
+            cursor: pointer;
+        }
+
+        .src {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            height: 40px;
+            width: 40px;
+            background: #fff;
+            text-align: center;
+            font-size: 16px;
+            line-height: 40px;
+            border-radius: 50%;
+            border: none;
+            opacity: 0.6;
+            cursor: pointer;
+            text-decoration: none !important;
+        }
+
+        .src:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <div>
+            <h3>WebGL2 Samples</h3>
+            <hr>
+            <div id="webgl2samplediv">
+                <a class="sample" target="test1">test1</a>
+                <a class="sample" target="test2">test2</a>
+            </div>
+        </div>
+    </div>
+    <iframe title="d"></iframe>
+    <a class="src" target="_blank">&lt; &gt;</a>
+    <script>
+        const iframe = document.querySelector('iframe')
+        const button = document.querySelector('.src')
+        const samples = document.querySelectorAll('.sample')
+        for (let sample of samples) {
+            sample.addEventListener('click', () => {
+                window.location.hash = sample.target
+                iframe.src = './samples/' + sample.target + "/" + sample.target + '.html'
+                button.href = 'https://github.com/tian666666/webgl2-tian-gis.git' + sample.target + '.ts'
+                const activeEle = document.querySelector('.active');
+                if (activeEle && activeEle.classList) {
+                    document.querySelector('.active').classList.remove('active')
+                }
+                sample.classList.add('active')
+            })
+        }
+        if (window.location.hash)
+            document.querySelector(`[target=${window.location.hash.slice(1)}]`).click()
+        else if (document.querySelector('.sample.active'))
+            document.querySelector('.sample.active').click()
+    </script>
+</body>
+
+</html>
