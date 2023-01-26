@@ -15,5 +15,5 @@
     "noImplicitReturns": true,
     "types": ["vite/client"]
   },
-  "include": ["samples"]
+  "include": ["samples","src"]
 }

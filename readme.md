@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: tianyw
  * @Date: 2023-01-25 15:18:01
- * @LastEditTime: 2023-01-26 18:15:31
+ * @LastEditTime: 2023-01-27 00:25:35
  * @LastEditors: tianyw
 -->
 # webgl2-tian-gis
@@ -35,17 +35,20 @@ npm run build #or yarn run build
 ## Project Layout
 
 ```bash
-├─ 📂 node_modules/   # Dependencies
+├─ 📂 node_modules/         # Dependencies
 │  ├─ 📁 
-│  └─ 📁 ...          # Other dependencies (TypeScript, Vite, etc.)
-├─ 📂 samples/        # Sample html
-│  └─ 📄 *.html       # HTML entry for each demo
-├─ 📄 .gitignore      # Ignore certain files in git repo
-├─ 📄 index.html      # Entry page
-├─ 📄 LICENSE         # MIT
-├─ 📄 logo.png        # tian logo image
-├─ 📄 package.json    # Node package file
-├─ 📄 tsconfig.json   # TS configuration file
-├─ 📄 vite.config.js  # vite configuration file
-└─ 📄 readme.md       # Read Me!
+│  └─ 📁 ...                # Other dependencies (TypeScript, Vite, etc.)
+├─ 📂 src/                  # common functions、datastructrues
+│  ├─ 📁 dataStructures     # datastructures
+│  └─ 📁 ...                # Other common functions
+├─ 📂 samples/              # Sample html
+│  └─ 📄 *.html             # HTML entry for each demo
+├─ 📄 .gitignore            # Ignore certain files in git repo
+├─ 📄 index.html            # Entry page
+├─ 📄 LICENSE               # MIT
+├─ 📄 logo.png              # tian logo image
+├─ 📄 package.json          # Node package file
+├─ 📄 tsconfig.json         # TS configuration file
+├─ 📄 vite.config.js        # vite configuration file
+└─ 📄 readme.md             # Read Me!
 ```
