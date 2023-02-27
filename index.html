@@ -95,8 +95,11 @@
                 <a class="sample" target="DSLinkList">DSLinkList</a>
                 <a class="sample" target="DSQueueAndStack">DSQueueAndStack</a>
                 <a class="sample" target="DSTreeNode">DSTreeNode</a>
-
-
+                <a class="sample" target="drawPoints">drawPoints</a>
+                <a class="sample" target="ShaderSeaScape">ShaderSeaScape</a>
+                <a class="sample" target="RotatingCubeApplication">RotatingCubeApplication</a>
+                <a class="sample" target="OctreeCube">OctreeCube</a>
+                <a class="sample" target="WonWorld">WonWorld</a>
             </div>
         </div>
     </div>
@@ -106,10 +109,15 @@
         const iframe = document.querySelector('iframe')
         const button = document.querySelector('.src')
         const samples = document.querySelectorAll('.sample')
+
+        webgl2samplediv.addEventListener('click', () => {
+            iframe.focus();
+        })
         for (let sample of samples) {
             sample.addEventListener('click', () => {
                 window.location.hash = sample.target
                 iframe.src = './samples/' + sample.target + "/" + sample.target + '.html'
+                iframe.focus(); // 解决 iframe 嵌入的网页内部的键盘事件监听失效问题
                 button.href = 'https://github.com/tian666666/webgl2-tian-gis.git' + sample.target + '.ts'
                 const activeEle = document.querySelector('.active');
                 if (activeEle && activeEle.classList) {
